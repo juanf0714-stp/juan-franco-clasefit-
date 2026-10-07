@@ -28,14 +28,14 @@ La necesidad de consultar cuántas personas están inscritas está identificada,
 
 ### Qué entra
 
-1. **Consulta semanal de clases:** mostrar las clases disponibles y la información básica de cada clase, incluida su capacidad y ocupación o cupos disponibles.
+1. **Consulta semanal de clases:** mostrar las clases disponibles por los siguientes 7 días, la información básica de cada clase, incluida su capacidad, ocupación o cupos disponibles.
 2. **Reserva de clases:** permitir reservar solo si existe capacidad, sin duplicar una reserva para la misma clase y respetando el saldo disponible de la membresía y el límite diario.
 3. **Cancelación de reservas:** permitir cancelar. Con al menos una hora de anticipación, se libera inmediatamente el cupo. Con menos de una hora, se considera cancelación tardía y aplica la penalización correspondiente. En ambos casos, el cupo queda disponible para otro socio.
 4. **Control de reservas múltiples:** aplicar un límite inicial de tres reservas activas por fecha calendario. El límite podrá modificarse posteriormente y el cambio no afectará las reservas ya realizadas.
 5. **Control según tipo de membresía:** contemplar membresías por paquete e ilimitadas. En una membresía por paquete, reservar descuenta inmediatamente una clase; cancelar con al menos una hora de anticipación la reintegra; una cancelación tardía o un no-show no la reintegra. Sin saldo no se puede reservar. La membresía ilimitada no depende de un saldo de clases, pero sí está sujeta al límite diario.
 6. **Registro de asistencia:** Daniela registra la asistencia de los socios en cada clase y marca para cada reserva si el socio asistió o no. En el MVP, una cancelación tardía y un no-show reciben el mismo tratamiento de penalización.
 7. **Administración básica:** Marcela y Daniela tendrán las mismas capacidades administrativas. Esta decisión responde al tamaño reducido del negocio y a que ambas deben poder cubrir las necesidades operativas. Daniela mantiene la responsabilidad operativa principal.
-8. **Dashboard básico:** presentar indicadores sencillos de porcentaje de ocupación, cancelaciones tardías y no-shows, comportamiento de reservas múltiples y tendencias de las últimas cuatro semanas. Su propósito es evaluar la efectividad de la solución y apoyar decisiones operativas, de producto y estratégicas, evitando volver a depender de reportes manuales en Excel. Se mantendrá deliberadamente simple, sin convertirse en un sistema avanzado de analítica.
+8. **Dashboard básico:** presentar indicadores sencillos de porcentaje de ocupación, cancelaciones tardías y no-shows, comportamiento de reservas múltiples y tendencias de las últimas cuatro semanas. Su propósito es evaluar la efectividad de la solución y apoyar decisiones operativas, de producto y estratégicas, depender de reportes manuales en Excel. Se mantendrá deliberadamente simple, sin convertirse en un sistema avanzado de analítica.
 
 ### Qué queda fuera
 
