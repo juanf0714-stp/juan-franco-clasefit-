@@ -2,26 +2,28 @@
 
 ## Herramientas utilizadas
 
-- **ChatGPT:** apoyo para analizar el caso, discutir decisiones de producto, instalar y configurar OpenSpec, y resolver dudas y validaciones durante el ejercicio.
-- **Codex CLI:** ejecución de tareas y edición de archivos dentro del proyecto.
+- **ChatGPT:** guía para instalar y configurar OpenSpec, apoyo en mejor construcción de prompts, resolver dudas y algunas validaciones durante el ejercicio.
+- **Codex CLI:** apoyo para analizar el caso, discutir decisiones de producto, ejecución de tareas y edición de archivos dentro del proyecto.
 - **OpenSpec:** estructuración del flujo `proposal → specs` y validación del change.
 - **Node.js/npm:** instalación y ejecución de las herramientas.
 
-Trabajé de forma incremental y decidí no entregar a Codex todos los documentos de la prueba para que resolviera el ejercicio completo. Mantuve bajo mi responsabilidad las decisiones de producto y utilicé la IA para explorar, estructurar, cuestionar y validar.
+Trabajé de forma incremental y decidí no entregar a Codex todos los documentos de la prueba para que resolviera el ejercicio completo. No le indiqué a codex que era una prueba técnica, sino que lo abordé como un caso de producto real. Mantuve bajo mi responsabilidad las decisiones de producto y utilicé la IA para explorar, estructurar, cuestionar y validar.
 
 ## Prompts clave
 
+Nota: En esta sección reemplacé la tabla de la plantilla por descripciones de para qué utilicé los prompts principales, mis hallazgos y decisiones a las que me condujeron. El detalle explícito de los propmts lo cargué en el documento *anexo_prompts_ia.md* para no alargar demasiado la bitácora.
+
 ### Prompt 1 · Exploración del problema
 
-Pedí analizar el caso antes de diseñar una solución. La IA identificó el problema principal y los secundarios, actores y necesidades, ambigüedades, preguntas de descubrimiento y casos límite. Traté sus inferencias como material para explorar, no como decisiones: después definí el MVP, las reglas de negocio y las preguntas abiertas.
+Pedí analizar el caso antes de diseñar una solución. La IA identificó de forma preliminar el problema principal y los secundarios, actores y necesidades, ambigüedades, preguntas de descubrimiento y casos límite. Traté sus inferencias como material para explorar, no como decisiones: comencé a definir e iterar, después delimité el problema según mi juicio y definí el MVP, las reglas de negocio junto con algunos supuestos que definí (por ej. trabajar con 2 tipos de membresías, una ilimitada y una por paquete con un número específico de clases), y las preguntas abiertas.
 
 ### Prompt 2 · Diseño del MVP
 
-Compartí con Codex las decisiones de producto y pedí estructurarlas en `diseno_producto.md`. Entre ellas: límite inicial de tres reservas activas por fecha calendario, corte de cancelación de una hora, reglas para membresías por paquete, membresía ilimitada sujeta al límite diario, registro de asistencia y dashboard básico. Dejé instructores y pagos fuera del MVP, y la política para membresías ilimitadas como decisión pendiente. El criterio fue que Codex ordenara las decisiones sin inventar funcionalidades ni resolver preguntas abiertas.
+Compartí con Codex las decisiones de producto y pedí estructurarlas en `diseno_producto.md`. Entre ellas: límite inicial de tres reservas activas por fecha calendario, corte de cancelación de una hora, reglas para membresías por paquete, membresía ilimitada sujeta al límite diario, registro de asistencia y un dashboard básico. Dejé instructores y pagos fuera del MVP, y la política para membresías ilimitadas como decisión pendiente para validar con el stakeholder. El criterio fue que Codex ordenara las decisiones sin inventar funcionalidades ni resolver preguntas abiertas. Revisé y ajusté el resultado en algunas iteraciones.
 
 ### Prompt 3 · Proposal y specs
 
-Usé `diseno_producto.md` y `openspec/project.md` como fuentes de verdad. Codex estructuró inicialmente seis capabilities y seis specs a partir de la estructura propuesta por OpenSpec. Al contrastarlo con el enunciado, que proponía una única spec delta en `specs/class-booking/spec.md`, decidí consolidar las seis capacidades en una capability `class-booking` y una sola spec, conservando los comportamientos funcionales necesarios.
+Usé `diseno_producto.md` y `openspec/project.md` como fuentes de verdad. Codex estructuró inicialmente seis capabilities y seis specs a partir de la estructura propuesta por OpenSpec. Tuve que iterar porque al contrastarlo con el enunciado, que proponía una única spec delta en `specs/class-booking/spec.md`, decidí consolidar las seis capacidades en una capability `class-booking` y una sola spec, conservando los comportamientos funcionales necesarios.
 
 ### Prompt 4 · Revisión de specs
 
